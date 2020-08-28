@@ -1,0 +1,105 @@
+.main-container {
+    height: 600px;
+    background-size: auto 600px !important;
+    text-align: right;
+}
+
+.bg-1 {
+    background: rgb(104,185,46) url(../images/login/banner1.jpg) no-repeat center;
+}
+
+.bg-2 {
+    background: rgb(0,161,58) url(../images/login/banner2.jpg) no-repeat center;
+}
+
+.bg-3 {
+    background: rgb(104,185,46) url(../images/login/banner3.jpg) no-repeat center;
+}
+
+
+.login-box {
+    display: inline-block;
+    height: 360px;
+    width: 320px;
+    margin: 100px 150px 100px 0;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    text-align: center;
+    padding: 30px;
+}
+
+.login-box > .login-title {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.group-box {
+    height: 34px;
+    font-size: 0;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.group-box > div {
+    font-size: 18px;
+    line-height: 35px;
+    height: 100%;
+    padding: 0 10px 0 12px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: rgba(104,185,46,0.8);
+    color: white;
+    font-weight: bold;
+}
+
+.group-box > input {
+    font-size: 16px;
+    height: 100%;
+    outline: 0;
+    border: 1px solid #68b92e;
+    padding: 10px;
+    border-left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.group-box > input:focus, .group-box > input:focus + div {
+    box-shadow: 0px 0px 2px #68b92e;
+}
+
+.login-box > .btn-login, .login-box > .btn-login:active:hover {
+    background-color: rgba(104,185,46,0.8);
+    border: 1px solid #68b92e;
+    padding: 4px;
+    font-size: 18px;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    outline: 0;
+    transition: all 0.25s ease;
+}
+
+.login-box > .btn-login:hover {
+    background-color: rgba(104,185,46,1);
+}
+
+.link-box {
+    float: right;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.link-box > a, .link-box > a:visited {
+    color: gray;
+    text-decoration: none;
+    outline: 0;
+}
+
+.link-box > a:hover, .link-box > a:active, .link-box > a:focus {
+    color: #68b92e;
+    text-decoration: none;
+}

@@ -1,0 +1,116 @@
+.scroll-banner {
+    height: 700px;
+}
+
+.scroll-banner > .scroll-item {
+    height: 700px;
+    margin-top: -700px;
+    opacity: 0;
+    background-position: center;
+    background-size: auto 700px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    transition: opacity 1s ease;
+    cursor: pointer;
+}
+
+.scroll-banner > .scroll-item:first-child {
+    margin-top: 0;
+}
+
+.scroll-banner > .scroll-item.actived {
+    opacity: 1;
+}
+
+.scroll-item#banner1 {
+    background-image: url(/images/index/banner1.jpg);
+}
+.scroll-item#banner2 {
+    background-image: url(/images/index/banner2.jpg);
+}
+.scroll-item#banner3 {
+    background-image: url(/images/index/banner3.jpg);
+}
+
+
+.scroll-content {
+    height: 700px;
+    text-align: right;
+    position: relative;
+    top: -700px;
+}
+
+.scroll-content > .scroll-right-box {
+    display: inline-block;
+    width: 300px;
+    height: 360px;
+    margin: 170px 170px 130px 0;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.scroll-right-box > .phone {
+    text-align: left;
+    padding-bottom: 20px;
+    margin: 0 10px;
+    border-bottom: 1px solid #ddd;
+}
+.scroll-right-box > .phone > div {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 1;
+}
+.scroll-right-box > .phone > div:last-child > div:last-child {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.scroll-right-box > .entry {
+    margin-top: 20px;
+    text-align: center;
+}
+.scroll-right-box > .entry > div {
+    margin-bottom: 10px;
+}
+.scroll-right-box > .entry > .entry-btn {
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    color: #68b92e;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 15px;
+    cursor: pointer;
+}
+.scroll-right-box > .entry > .entry-btn:hover {
+    background-color: #eee;
+}
+
+
+
+.scroll-dot {
+    width: 100%;
+    text-align: center;
+    height: 15px;
+    /* position: relative; */
+    /* top: -40px; */
+}
+
+.scroll-dot > dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px #fff;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.scroll-dot > dot.actived {
+    background-color: #ccc;
+    box-shadow: 0px 0px 2px #ccc;
+}

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>废品回收</title>
+
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link href="./style/waste-recycling.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div>
+        <div class="banner"></div>
+        <div class="container mid-container">
+            <div class="searchbar">
+                <div class="searchbar-text">搜索机器型号</div>
+                <div class="searchbar-input">
+                    <div class="input-group">
+                        <input id="keyword" type="text" placeholder="输入关键词搜索" onfocus="inputFocus()" onblur="inputBlur()" />
+                        <button>搜索</button>
+                    </div>
+                    <div class="input-effect"></div>
+                </div>
+            </div>
+            <div class="search-command">
+                <a onclick="setKeyword('iPhone 4')">iPhone 4</a>
+                <a onclick="setKeyword('iPhone 4S')">iPhone 4S</a>
+                <a onclick="setKeyword('iPhone 5S')">iPhone 5S</a>
+            </div>
+            <div class="category">
+                <div class="category-box">
+                    <div class="category-title">
+                        <span>回收分类</span>
+                        <span>Recycling Category</span>
+                    </div>
+                    <div class="category-content item-orange" id="cate-big">
+                        
+                    </div>
+                </div>
+                <div class="category-box">
+                    <div class="category-title">
+                        <span>小分类选择</span>
+                        <span>Select Small Category</span>
+                    </div>
+                    <div class="category-content item-green" id="cate-small">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="point-mall">
+                <div class="point-mall-title">
+                    <span>3R积分商场</span>
+                    <span>3RPoints mall</span>
+                </div>
+                <div class="point-goods-box" id="point-mall">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>const tab=2;$.get({url:'./general/header.html',success: (e)=>{$('#header').html(e);tab?$('#header-tab-'+tab.toString()).addClass('actived'):0;}});$.get({url:'./general/footer.html',success: (e)=>{$('#footer').html(e);}});</script>
+    <script src="script/waste-recycling.js"></script>
+</body>
+
+</html>

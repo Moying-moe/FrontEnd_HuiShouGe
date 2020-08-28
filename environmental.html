@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>回收哥</title>
+    <link href="./lib/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet"><!--bootstrap_css-->
+    <link rel="stylesheet" href="./style/environmental.css" />
+    <link rel="stylesheet" href="./style/env_main.css">
+    <script src="./lib/jquery-3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="center-picture">
+        <img src="./images/environmental/huishouge.png" width="100%">
+    </div>
+    <div class="container" style="margin-top:50px;">
+        <div class="center-left">
+            <div class="center-left-img">
+                <img src="./images/environmental/env_1.png">
+                <span>
+                    环境价值
+                </span>
+            </div>
+            <div class="left-text">
+                <ul>
+                    <li role="tab-switcher" id="tab-btn-1" onclick="tabSwitch(1)" class="actived">线下活动</li>
+                    <li role="tab-switcher" id="tab-btn-2" onclick="tabSwitch(2)">我的碳足迹</li>
+                    <li role="tab-switcher" id="tab-btn-3" onclick="tabSwitch(3)">格林美风采</li>
+                </ul>
+            </div>
+        </div>
+        <div class="center-right">
+            <div class="right-top">
+                <img src="./images/environmental/env_3.png">
+                <span id="title-cate">首页>废品危害>线下活动</span>
+            </div>
+            <div class="en-value-right-box">
+                <div class="en-value-right">
+
+                    <div class="en-value-right-2">
+                        <div class="en-value-tit yahei" id="title">线下活动</div>
+                        <ul>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">电子废弃物污染事件 (广东贵屿)</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">全国政协调研组莅临格林美循环产业园参观指导</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">热烈祝贺中国有色金属资源循环论坛在格林美（荆门）循环产业园成功举办</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">电子废弃物污染事件 (广东贵屿)</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">全国政协调研组莅临格林美循环产业园参观指导</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">热烈祝贺中国有色金属资源循环论坛在格林美（荆门）循环产业园成功举办</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">电子废弃物污染事件 (广东贵屿)</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">全国政协调研组莅临格林美循环产业园参观指导</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">热烈祝贺中国有色金属资源循环论坛在格林美（荆门）循环产业园成功举办</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">电子废弃物污染事件 (广东贵屿)</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">全国政协调研组莅临格林美循环产业园参观指导</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <img src="./images/environmental/env_4.png" alt="">
+                                    <a href="" target="_blank">热烈祝贺中国有色金属资源循环论坛在格林美（荆门）循环产业园成功举办</a>
+                                </p> <span>2015-06-29</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="en-value-right-3">
+                        <dl>
+                            <dt>上一页</dt>
+                            <dd>1</dd>
+                            <dd>2</dd>
+                            <dd>3</dd>
+                            <dd>...</dd>
+                            <dt>下一页</dt>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer"></div>
+    <script>const tab=4;$.get({url:'./general/header.html',success: (e)=>{$('#header').html(e);tab?$('#header-tab-'+tab.toString()).addClass('actived'):0;}});$.get({url:'./general/footer.html',success: (e)=>{$('#footer').html(e);}});</script>
+    
+    <script src="script/environmental.js"></script>
+</body>
+
+</html>

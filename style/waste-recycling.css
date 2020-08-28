@@ -1,0 +1,200 @@
+.banner {
+    height: 365px;
+    background: url(/images/waste-recycling/waste-recycling-banner.jpg) no-repeat center;
+}
+
+.container.mid-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.searchbar {
+
+}
+
+.searchbar > .searchbar-text {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.searchbar > .searchbar-input {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 0;
+    /* height: 50px; */
+    vertical-align: middle;
+}
+
+.searchbar > .searchbar-input > .input-group {
+    height: 48px;
+}
+
+.searchbar > .searchbar-input > .input-group > input[type="text"] {
+    border: 2px solid #ff8555;
+    border-right: 0;
+    padding: 11px 10px 9px;
+    width: 350px;
+    font-size: 17px;
+    outline: 0;
+}
+
+.searchbar > .searchbar-input > .input-group > button {
+    font-size: 19px;
+    border-radius: 0;
+    border: 0;
+    height: 100%;
+    background-color: #ff8555;
+    padding: 10px 40px;
+    color: white;
+    transition: all 0.25s ease;
+}
+
+.searchbar > .searchbar-input > .input-group > button:hover {
+    background-color: #ff6c32;
+}
+
+.input-effect {
+    height: 2px;
+    background-color: #ff8555;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.input-effect.actived {
+    width: 100%;
+}
+
+.search-command {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.search-command > a {
+    margin: 0 10px;
+}
+
+.search-command > a, .search-command > a:visited {
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.search-command > a:hover, .search-command > a:active {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.category {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.category-title > span:first-child, .point-mall-title > span:first-child {
+    color: #555;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.category-title > span:last-child, .point-mall-title > span:last-child {
+    color: #bbb;
+    font-size: 15px;
+}
+
+.category-box {
+    margin-top: 15px;
+}
+
+.category-content {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.category-item {
+    flex: 0 0 16.66%;
+    height: 180px;
+    text-align: center;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding-top: 35px;
+    user-select: none;
+}
+
+.category-item > div {
+    font-size: 17px;
+    margin-top: 12px;
+    color: #666;
+}
+
+.category-item.actived {
+    background-color: #fff;
+}
+.item-orange > .category-item.actived > div {
+    color: #ff8555;
+}
+.item-green > .category-item.actived > div {
+    color: #47752c;
+}
+
+.item-green > .category-item > img {
+    border: 1px dotted #47752c;
+}
+
+
+.point-mall {
+    margin: 40px 0;
+    text-align: left;
+}
+
+.point-mall-title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.point-goods-box {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.point-goods-item {
+    flex: 0 0 auto;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.goods-info {
+    text-align: left;
+    margin-top: 5px;
+}
+
+.goods-info > div {
+    margin: 4px 0;
+}
+
+.goods-info > .goods-price {
+    color: #ff8555;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.goods-info > .goods-name {
+    font-family: SimSun;
+    font-size: 15px;
+}
+
+.goods-info > .goods-point {
+    font-family: SimSun;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.goods-info > .goods-point > span {
+    color: crimson;
+}

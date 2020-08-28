@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+
+    <link href="./lib/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet">
+    <link href="./lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="./lib/jquery-3.4.1/jquery.min.js"></script>
+    <link href="./style/general.css" rel="stylesheet">
+</head>
+
+<body>
+    <div role="footer">
+        <div class="overlay" id="overlay" style="display: none;">
+            <div class="overlay-box">
+                <div class="overlay-close" onclick="closeOverlay()">
+                    <i class="fa fa-close fa-2x"></i>
+                </div>
+                <div class="overlay-inner">
+                    <div id="wechat-box" style="display: none;">
+                        <img src="./images/general/code-wechat.jpg" />
+                    </div>
+                    <div id="download-box" style="display: none;">
+                        <div>
+                            <img src="./images/general/code-ios1.png" />
+                            <div>回收哥用户下载</div>
+                        </div>
+                        <div>
+                            <img src="./images/general/code-ios2.png" />
+                            <div>回收哥加盟下载</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container footer">
+            <div class="footer-item">
+                <div class="about-box">
+                    <a href="/about-us.html#contact" class="a-black-red">联系我们</a>
+                    <a href="/about-us.html#about" class="a-black-red">关于我们</a>
+                    <a href="/about-us.html#help" class="a-black-red">帮助中心</a>
+                </div>
+                <div class="copyright">
+                    <div>© 2015 huishouge.cn All Rights Reserved</div>
+                    <div>版权所有：格林美股份有限公司 粤ICP备05063494号-4</div>
+                </div>
+            </div>
+            <div class="footer-item platform">
+                <div class="platform-item" onclick="showOverlay(0)">
+                    <img src="./images/general/foot_ico1.png" />
+                    <span>关注微信</span>
+                </div>
+                <div class="platform-item" onclick="showOverlay(1)">
+                    <img src="./images/general/foot_ico2.png" />
+                    <span>iOS下载</span>
+                </div>
+                <div class="platform-item" onclick="showOverlay(1)">
+                    <img src="./images/general/foot_ico3.png" />
+                    <span>安卓下载</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            function showOverlay(method){
+                if(method == 0){
+                    $('#overlay').show();
+                    $('#wechat-box').show();
+                }else if(method == 1) {
+                    $('#overlay').show();
+                    $('#download-box').show();
+                }
+            }
+            function closeOverlay(){
+                $('#overlay').hide();
+                $('#wechat-box').hide();
+                $('#download-box').hide();
+            }
+        </script>
+    </div>
+</body>
+
+</html>

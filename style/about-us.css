@@ -1,0 +1,214 @@
+/* 中间部分 */
+.m-body {
+    display: flex;
+}
+/* 中间左边部分 */
+.m-left {
+    /* width: 260px; */
+    height: 318px;
+    /* background-color: antiquewhite; */
+    margin-top: 50px;
+    border: 1px solid lightgrey;
+    border-left: none;
+    border-bottom: none;
+    border-top: 0px;
+    border-right: none;
+}
+/* 左边i图标 */
+.m-left-logo-i {
+    width: 243px;
+    height: 150px;
+    /* background-color: aqua; */
+    margin: 0 auto;
+    margin-right: 0px;
+    border: 1px solid lightgrey;
+    border-bottom: 0px;
+    /* border-top: 0px; */
+    border-right: 0px;
+}
+.m-left-logo-i img {
+    transform: translate(80px, 40px);
+}
+/* 左边三行字 */
+.m-left-list {
+    width: 243px;
+    height: 168px;
+    /* background-color: blueviolet; */
+    border: 1px solid lightgrey;
+    /* border-bottom: 0px; */
+    border-top: 0px;
+
+    border-right: 0px;
+    margin: 0 auto;
+    margin-right: 0px;
+}
+.m-left-list ul {
+    /* list-style: none; */
+    /* width: 243px;
+	height: 159px; */
+    /* background-color: red; */
+}
+.m-left-list ul li {
+    height: 53px;
+    line-height: 53px;
+    color: black;
+    text-align: center;
+    border-top: 1px solid lightgrey;
+    font-size: 15px;
+    user-select: none;
+}
+
+.m-left-list ul li.active {
+    margin-left: -17px;
+    line-height: 42px;
+    background: url(../images/about-us/m-left-backgrond.png) center no-repeat;
+    color: white !important;
+}
+
+/* 中间右边部分 */
+.m-right {
+    width: 75%;
+    min-height: 600px;
+    /* background-color: aquamarine; */
+    margin-top: 50px;
+    border: 1px solid lightgrey;
+}
+/* 右边上面一行图片和小字 */
+.m-right-up {
+    width: 95%;
+    height: 50px;
+    /* background-color: burlywood; */
+    margin: 0 auto;
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+}
+.m-right-up img {
+    transform: translateY(20px);
+}
+.m-right-upword {
+    padding-left: 10px;
+    padding-top: 18px;
+    color: grey;
+}
+
+/* 右边下面文字图片内容 */
+/* 联系我们 */
+.m-right-down {
+    width: 95%;
+    min-height: 300px;
+    /* background-color: blue; */
+    margin: 0 auto;
+}
+.m-right-down img {
+    width: 100%;
+    padding-bottom: 20px;
+}
+.m-right-down-title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #009b2d;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+.m-right-down-word {
+    padding-top: 20px;
+    /* text-indent: 2em; */
+    line-height: 30px;
+    color: grey;
+    padding-bottom: 10px;
+}
+/* 关于我们 */
+.m-right-down-phy2 {
+    text-indent: 5%; /* 首行缩进 */
+}
+.m-right-down-phy2 p {
+    padding-top: 8px;
+    padding-bottom: 5px;
+    line-height: 35px;
+    color: grey;
+    font-size: 15px;
+}
+
+/* 帮助中心 */
+.m-right-down-cp2 {
+    display: block;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    color: #009b2d;
+    padding-top: 20px;
+}
+.m-right-down ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border-bottom: 1px dotted lightgrey; */
+    line-height: 40px;
+}
+.m-right-down ul li {
+    font-family: SimSun;
+    padding-top: 10px;
+    color: grey;
+}
+.m-right-down ul li b {
+    font-weight: bold;
+    background: url(../images/about-us/about_li.jpg) left no-repeat;
+    padding-left: 10px;
+}
+.help-page ul li b {
+    font-size: 17px;
+}
+.help-page ul {
+    background-image: linear-gradient(to right, #ccc 0%, #ccc 30%, transparent 30%);
+    background-size: 8px 1px;
+    background-repeat: repeat-x;
+    background-position-y: 100%;
+}
+.m-right-down ul li p {
+    font-size: 15px;
+    line-height: 1.8;
+    padding-left: 10px;
+}
+.m-right-down-hotline {
+    display: flex;
+    justify-content: center;
+}
+.m-right-down-innerpage {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.m-right-down-innerpage > a {
+    padding: 0 4px;
+    cursor: pointer;
+}
+.m-right-down-innerpage > a,
+.m-right-down-innerpage > a:visited {
+    color: black;
+    text-decoration: none;
+}
+.m-right-down-innerpage > a:hover,
+.m-right-down-innerpage > a:focus,
+.m-right-down-innerpage > a:active,
+.m-right-down-innerpage > a.actived {
+    color: red;
+    text-decoration: none;
+}
+.m-right-down-innerpage > span {
+    color: gray;
+}
+.m-right-down-hotline-word {
+    padding-top: 25px;
+    padding-left: 10px;
+}
+.m-right-down-hotline-word > p {
+    margin-bottom: 5px;
+}
+
+#select2,
+#select3 {
+    display: none;
+}

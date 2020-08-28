@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link href="./lib/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet">
+    <!--bootstrap_css-->
+    <script src="./lib/jquery-3.4.1/jquery.min.js"></script>
+    <!--jquery-->
+    <link href="./lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--fontawesome-->
+    <link href="style/login.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="main-container">
+        <div class="login-box">
+            <div class="login-title">
+                <i class="fa fa-desktop fa"></i> 登录
+            </div>
+            <div class="group-box">
+                <input type="text" placeholder="回收哥 账户/id" />
+                <div><i class="fa fa-fw fa-user-o"></i></div>
+            </div>
+            <div class="group-box">
+                <input type="password" placeholder="密码" />
+                <div><i class="fa fa-fw fa-lock"></i></div>
+            </div>
+            <button class="btn-login">登录</button>
+            <div class="link-box">
+                <a href="#">忘记密码</a>
+                <a href="#">免费注册</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>const tab=0;$.get({url:'./general/header.html',success: (e)=>{$('#header').html(e);tab?$('#header-tab-'+tab.toString()).addClass('actived'):0;}});$.get({url:'./general/footer.html',success: (e)=>{$('#footer').html(e);}});</script>
+    <script src="script/login.js"></script>
+</body>
+
+</html>
