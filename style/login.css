@@ -27,6 +27,7 @@
     border-radius: 7px;
     text-align: center;
     padding: 30px;
+    overflow: hidden;
 }
 
 .login-box > .login-title {
@@ -35,6 +36,7 @@
 }
 
 .group-box {
+    border-radius: 5px;
     height: 34px;
     font-size: 0;
     display: flex;
@@ -67,11 +69,23 @@
     border-bottom-right-radius: 5px;
 }
 
-.group-box > input:focus, .group-box > input:focus + div {
+.group-box:not([error]) > input:focus, .group-box > input:focus + div {
     box-shadow: 0px 0px 2px #68b92e;
 }
 
-.login-box > .btn-login, .login-box > .btn-login:active:hover {
+.group-box[error] {
+    box-shadow: 0px 0px 4px 1px #f00;
+}
+
+.group-box[error] > div {
+    background-color: rgba(255,0,0,0.8);
+}
+
+.group-box[error] > input {
+    border: 1px solid #f00;
+}
+
+.login-box > .input-set > .btn-login, .login-box > .input-set > .btn-login:active:hover {
     background-color: rgba(104,185,46,0.8);
     border: 1px solid #68b92e;
     padding: 4px;
@@ -83,7 +97,8 @@
     transition: all 0.25s ease;
 }
 
-.login-box > .btn-login:hover {
+
+.login-box > .input-set > .btn-login:hover {
     background-color: rgba(104,185,46,1);
 }
 
@@ -102,4 +117,47 @@
 .link-box > a:hover, .link-box > a:active, .link-box > a:focus {
     color: #68b92e;
     text-decoration: none;
+}
+
+.loading-box {
+    padding-top: 50px;
+}
+
+.error-tip {
+    position: absolute;
+    width: 150px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.error-tip.shake {
+    animation: shake 0.5s 1;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0px);
+    }
+    10% {
+        transform: translateX(-10px);
+    }
+    30% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    70% {
+        transform: translateX(10px);
+    }
+    90% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }

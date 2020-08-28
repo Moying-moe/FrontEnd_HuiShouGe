@@ -62,3 +62,35 @@ function step(pid) {
     lastOverDeg = overDeg;
     // p.attr('d', 'M25,25 L'+sx+','+sy+' M25,25 L'+ex+','+ey);
 }
+
+function errorTip(text, parentEL){
+    parentEL.attr('error','');
+
+    var errortip = $('#error-tip');
+    errortip.text(text);
+    errortip[0].style.top = (parentEL[0].offsetTop - (errortip.height()+32 - parentEL.height())/2).toString() + 'px';
+    errortip[0].style.left = (parentEL[0].offsetLeft - errortip.width() - 32 - 20).toString() + 'px';
+
+    errortip.show();
+    errortip.addClass('shake');
+    setTimeout("$('#error-tip').removeClass('shake')",700);
+    setTimeout("$('#error-tip').fadeOut(1000)",1000);
+}
+
+function login() {
+    $('[error]').removeAttr('error');
+
+    var user = $('#user').val();
+    var pwd = $("#pwd").val();
+    if(user == ''){
+        errorTip('请输入用户名', $('#user').parent());
+        return ;
+    }else if(pwd == ''){
+        errorTip('请输入密码', $('#pwd').parent());
+        return ;
+    }
+
+    $('#input-box').hide(500);
+    addLoadingMark('#loading-effect');
+    setTimeout("location.href='/index.html'", Math.random()*1000+3000);
+}
