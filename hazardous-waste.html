@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>环境价值</title>
+    <title>废品危害</title>
     <link href="./lib/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet"><!--bootstrap_css-->
-    <link rel="stylesheet" href="./style/environmental.css" />
+    <link rel="stylesheet" href="./style/hazardous-waste.css" />
     <link rel="stylesheet" href="./style/env_main.css">
     <script src="./lib/jquery-3.4.1/jquery.min.js"></script>
 </head>
@@ -14,21 +14,20 @@
     <div id="header"></div>
 
     <div class="center-picture">
-        <img src="./images/environmental/huishouge.png" width="100%">
+        <img src="./images/hazardous-waste/hazardous-waste-banner.jpg" width="100%">
     </div>
     <div class="container" style="margin-top:50px;">
         <div class="center-left">
             <div class="center-left-img">
-                <img src="./images/environmental/env_1.png">
+                <img src="./images/hazardous-waste/en_ico2.png">
                 <span>
-                    环境价值
+                    废品危害
                 </span>
             </div>
             <div class="left-text">
                 <ul>
-                    <li role="tab-switcher" id="tab-btn-1" onclick="tabSwitch(1)" class="actived">线下活动</li>
-                    <li role="tab-switcher" id="tab-btn-2" onclick="tabSwitch(2)">我的碳足迹</li>
-                    <li role="tab-switcher" id="tab-btn-3" onclick="tabSwitch(3)">格林美风采</li>
+                    <li role="tab-switcher" id="tab-btn-1" onclick="tabSwitch(1)" class="actived">普及知识</li>
+                    <li role="tab-switcher" id="tab-btn-2" onclick="tabSwitch(2)">业界动态</li>
                 </ul>
             </div>
         </div>
@@ -134,9 +133,9 @@
     </div>
     
     <div id="footer"></div>
-    <script>const tab=4;$.get({url:'./general/header.html',success: (e)=>{$('#header').html(e);tab?$('#header-tab-'+tab.toString()).addClass('actived'):0;}});$.get({url:'./general/footer.html',success: (e)=>{$('#footer').html(e);}});</script>
+    <script>const tab=5;$.get({url:'./general/header.html',success: (e)=>{$('#header').html(e);tab?$('#header-tab-'+tab.toString()).addClass('actived'):0;}});$.get({url:'./general/footer.html',success: (e)=>{$('#footer').html(e);}});</script>
     
-    <script src="script/environmental.js"></script>
+    <script src="script/hazardous-waste.js"></script>
 </body>
 
 </html>
