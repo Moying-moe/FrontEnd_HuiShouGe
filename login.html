@@ -9,9 +9,12 @@
     <!--bootstrap_css-->
     <script src="./lib/jquery-3.4.1/jquery.min.js"></script>
     <!--jquery-->
+    <script src="./lib/jquery-cookie-1.4.1/jquery.cookie.min.js"></script>
+    <!--jquery cookie-->
     <link href="./lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!--fontawesome-->
     <link href="style/login.css" rel="stylesheet">
+    <link href="./style/general.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,14 +37,41 @@
                 <button class="btn-login" onclick="login()">登录</button>
                 <div class="link-box">
                     <a href="#">忘记密码</a>
-                    <a href="#">免费注册</a>
+                    <a onclick="toSignup()">免费注册</a>
                 </div>
-                <div id="error-tip" class="error-tip" style="display: none;">请输入用户名</div>
             </div>
-            <div class="loading-box" id="loading-effect">
-
-            </div>
+            <div class="loading-box" id="loading-effect"></div>
         </div>
+        <div class="signup-box" style="display: none;">
+            <div class="signup-title">
+                <i class="fa fa-desktop fa"></i> 注册
+            </div>
+            <div class="input-set" id="input-box-s">
+                <div class="group-box">
+                    <input id="suser" type="text" placeholder="昵称 (1-14字)" />
+                    <div><i class="fa fa-fw fa-user-o"></i></div>
+                </div>
+                <div class="group-box">
+                    <input id="semail" type="text" placeholder="电子邮箱" />
+                    <div><i class="fa fa-fw fa-envelope-o"></i></div>
+                </div>
+                <div class="group-box">
+                    <input id="spwd" type="password" placeholder="密码 (6-16个字符)" />
+                    <div><i class="fa fa-fw fa-lock"></i></div>
+                </div>
+                <div class="group-box">
+                    <input id="spwdrepeat" type="password" placeholder="再输入一次密码" />
+                    <div><i class="fa fa-fw fa-lock"></i></div>
+                </div>
+                <div class="checkbox">
+                    <input id="cb-agree" type="checkbox" />
+                    <span>我已阅读并同意 <a href="#">回收哥用户协议</a></span>
+                </div>
+                <button class="btn-signup" onclick="signup()">免费注册</button>
+            </div>
+            <div class="loading-box" id="loading-effect-s"></div>
+        </div>
+        <div id="error-tip" class="error-tip" style="display: none;">请输入用户名</div>
     </div>
 
     <div id="footer"></div>

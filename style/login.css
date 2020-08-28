@@ -1,3 +1,7 @@
+a {
+    cursor: pointer;
+}
+
 .main-container {
     height: 600px;
     background-size: auto 600px !important;
@@ -7,11 +11,9 @@
 .bg-1 {
     background: rgb(104,185,46) url(../images/login/banner1.jpg) no-repeat center;
 }
-
 .bg-2 {
     background: rgb(0,161,58) url(../images/login/banner2.jpg) no-repeat center;
 }
-
 .bg-3 {
     background: rgb(104,185,46) url(../images/login/banner3.jpg) no-repeat center;
 }
@@ -21,13 +23,25 @@
     display: inline-block;
     height: 360px;
     width: 320px;
-    margin: 100px 150px 100px 0;
+    position: relative;
+    top: 50%;
+    left: -100px;
+    transform: translate(0, -50%);
+    /* margin: 100px 150px 100px 0; */
     background-color: #fff;
     border: 1px solid lightgray;
     border-radius: 7px;
     text-align: center;
     padding: 30px;
     overflow: hidden;
+    transition: all 1s ease 0s;
+}
+
+.login-box.fade-to-signup {
+    left: -50%;
+    transform: translate(50%, -50%);
+    height: 430px;
+    width: 350px;
 }
 
 .login-box > .login-title {
@@ -36,6 +50,7 @@
 }
 
 .group-box {
+    width: 100%;
     border-radius: 5px;
     height: 34px;
     font-size: 0;
@@ -47,6 +62,7 @@
 }
 
 .group-box > div {
+    flex: 0 0 auto;
     font-size: 18px;
     line-height: 35px;
     height: 100%;
@@ -59,6 +75,7 @@
 }
 
 .group-box > input {
+    flex: 1 1 auto;
     font-size: 16px;
     height: 100%;
     outline: 0;
@@ -160,4 +177,53 @@
     100% {
         transform: translateX(0px);
     }
+}
+
+
+.signup-box {
+    display: inline-block;
+    height: 430px;
+    width: 350px;
+    position: relative;
+    left: -50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    /* margin: 100px 150px 100px 0; */
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    text-align: center;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.signup-box > .signup-title {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.signup-box .group-box {
+    margin: 15px 0;
+}
+
+.signup-box > .input-set > .btn-signup, .signup-box > .input-set > .btn-signup:active:hover {
+    background-color: rgba(104,185,46,0.8);
+    border: 1px solid #68b92e;
+    padding: 4px;
+    margin-top: 15px;
+    font-size: 18px;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    outline: 0;
+    transition: all 0.25s ease;
+}
+
+
+.signup-box > .input-set > .btn-signup:hover {
+    background-color: rgba(104,185,46,1);
+}
+
+.checkbox input[type=checkbox] {
+    position: inherit !important;
 }

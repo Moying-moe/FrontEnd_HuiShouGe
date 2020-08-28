@@ -68,8 +68,8 @@ function errorTip(text, parentEL){
 
     var errortip = $('#error-tip');
     errortip.text(text);
-    errortip[0].style.top = (parentEL[0].offsetTop - (errortip.height()+32 - parentEL.height())/2).toString() + 'px';
-    errortip[0].style.left = (parentEL[0].offsetLeft - errortip.width() - 32 - 20).toString() + 'px';
+    errortip[0].style.top = (parentEL.offset().top - (errortip.height()+32 - parentEL.height())/2).toString() + 'px';
+    errortip[0].style.left = (parentEL.offset().left - errortip.width() - 32 - 20).toString() + 'px';
 
     errortip.show();
     errortip.addClass('shake');
@@ -90,7 +90,57 @@ function login() {
         return ;
     }
 
+    $.cookie('user',user);
+
     $('#input-box').hide(500);
     addLoadingMark('#loading-effect');
     setTimeout("location.href='/index.html'", Math.random()*1000+3000);
+}
+
+function signup() {
+    $('[error]').removeAttr('error');
+
+    var user = $('#suser').val();
+    var email = $('#semail').val();
+    var pwd = $('#spwd').val();
+    var pwdrepeat = $('#spwdrepeat').val();
+    var agree = $('#cb-agree')[0].checked;
+    if(user.length < 1 || user.length > 14){
+        errorTip('昵称长度需要在1-14字', $('#suser').parent());
+        return ;
+    }else if(! /^[a-zA-Z0-9_]+?@[a-zA-Z0-9_-]+?\.[a-zA-Z0-9]+?$/.test(email)){
+        errorTip('邮箱格式不正确', $('#semail').parent());
+        return ;
+    }else if(pwd.length < 6 || pwd.length > 16){
+        errorTip('密码长度需要在6-16个字符', $('#spwd').parent());
+        return ;
+    }else if(pwd != pwdrepeat){
+        errorTip('两次输入密码不一致', $('#spwdrepeat').parent());
+        return ;
+    }else if(!agree){
+        errorTip('请同意用户协议', $('#cb-agree').parent());
+        return ;
+    }
+
+    $.cookie('user',user);
+
+    $('#input-box-s').hide(500);
+    addLoadingMark('#loading-effect-s');
+    setTimeout("location.href='/index.html'", Math.random()*1000+3000);
+}
+
+function toSignup() {
+    $('.login-box').addClass('fade-to-signup');
+    $('.main-container').addClass('fade-to-signup');
+    $('.login-box').children().hide(500);
+    setTimeout(windowSwitch,1000);
+    // addLoadingMark('#loading-effect');
+    // $('.login-box').children().fadeOut(1000);
+}
+
+function windowSwitch() {
+    $('.login-box').hide();
+    $('.signup-box').children().hide();
+    $('.signup-box').show();
+    $('.signup-box').children().fadeIn(500);
 }

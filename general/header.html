@@ -7,11 +7,13 @@
 
     <link href="./lib/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet">
     <link href="./lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="./lib/jquery-3.4.1/jquery.min.js"></script>
-    <link href="./style/general.css" rel="stylesheet">
+    <!-- <script src="./lib/jquery-3.4.1/jquery.min.js"></script> -->
+    <script src="./lib/jquery-cookie-1.4.1/jquery.cookie.min.js"></script>
+    <!-- <link href="./style/general.css" rel="stylesheet"> -->
 </head>
 
 <body>
+    <link href="./style/general.css" rel="stylesheet">
     <div role="header">
         <div class="header-navbar">
             <div class="container">
@@ -29,9 +31,14 @@
                     </div>
                 </div>
                 <div class="navbar-right-box">
-                    <div class="nav-login">
+                    <div class="nav-login" id="login">
                         <a href="/login.html" class="a-gray-red">登陆</a>
-                        <a href="/signup.html" class="a-gray-red">注册</a>
+                        <a href="/login.html#signup" class="a-gray-red">注册</a>
+                        <span class="v-divideline" style="margin-left: 5px;"></span>
+                    </div>
+                    <div class="nav-login" id="welcome" style="display: none;">
+                        <span id="username"></span>
+                        <a href="/logout.html" class="a-black-red" style="padding-left: 0;">登出</a>
                         <span class="v-divideline" style="margin-left: 5px;"></span>
                     </div>
                     <div class="nav-order-center">
@@ -62,6 +69,18 @@
             </div>
         </div>
     </div>
+    <script>
+        var user = $.cookie('user');
+        if(user){
+            $('#login').hide();
+            $('#username').text('欢迎你 '+user);
+            $('#welcome').show();
+        }
+        function logout() {
+            $.removeCookie('user');
+            location.reload();
+        }
+    </script>
 </body>
 
 </html>
