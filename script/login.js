@@ -133,10 +133,11 @@ function toSignup(method) {
     if(method == 'quick'){
         windowSwitch();
     }else{
+        addLoadingMark('#loading-effect');
         $('.login-box').addClass('fade-to-signup');
         $('.main-container').addClass('fade-to-signup');
-        $('.login-box').children().hide(500);
-        setTimeout(windowSwitch,1000);
+        $('.login-box').children(':not(#loading-effect)').hide(500);
+        setTimeout(windowSwitch,2000);
     }
 }
 
