@@ -1,0 +1,102 @@
+.container {
+    text-align: center;
+    font-size: 0;
+}
+
+.board-box {
+    /* transform: rotate(0deg); */
+    width: 600px;
+    height: 600px;
+    display: inline-block;
+    vertical-align: middle;
+    /* transition: transform 5s ease-out; */
+}
+
+.rolling-start {
+    animation: rolling 0.5s 1 ease-in;
+}
+
+.rolling-fast {
+    animation: rolling 0.25s infinite linear;
+}
+
+.rolling-end-1 {
+    animation: rolling-end-1 3s 1 ease-out;
+    transform: rotate(270deg);
+}
+
+.rolling-end-2 {
+    animation: rolling-end-2 2.95s 1 ease-out;
+    transform: rotate(112.5deg);
+}
+
+.rolling-end-3 {
+    animation: rolling-end-3 2.9s 1 ease-out;
+    transform: rotate(22.5deg);
+}
+
+@keyframes rolling {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rolling-end-1 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(2070deg);
+    }
+}
+
+@keyframes rolling-end-2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1912.5deg);
+    }
+}
+
+@keyframes rolling-end-3 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1822.5deg);
+    }
+}
+
+.start-btn {
+    position: absolute;
+    left: calc(50% - 75px - 30px);
+    top: calc(300px - 75px);
+    height: 150px;
+    width: 150px;
+    border: 3px solid rgba(0,0,0,0.7);
+    background-color: #fc5185;
+    border-radius: 50%;
+    outline: 0;
+    font-size: 40px;
+    padding: 20px;
+    color: #252a34;
+    line-height: 1;
+    transition: all 0.25s ease;
+}
+
+.start-btn:hover {
+    background-color: rgb(251,100,146);
+    border: 3px solid #000;
+}
+
+.arrow-box {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    left: -40px;
+    z-index: 512;
+}

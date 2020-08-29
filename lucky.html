@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png" type="image/png" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/png"/>
+    <title>幸运抽奖</title>
+    <link href="./lib/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet">
+    <!--bootstrap_css-->
+    <script src="./lib/jquery-3.4.1/jquery.min.js"></script>
+    <!--jquery-->
+    <link rel="stylesheet" type="text/css" href="./style/lucky.css" />
+    <link href="./style/general.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="board-box" id="board">
+            <img src="./images/lucky/board.png" />
+            <button class="start-btn" id="sbtn" onclick="draw()">幸运抽奖</button>
+        </div>
+        <div class="arrow-box">
+            <img src="./images/lucky/arrow.png" />
+        </div>
+    </div>
+    <script>
+        function draw(){
+            var r = Math.random();
+            if(r < (1/6)){
+                rollTo(3);
+            }else if(r < 0.5){
+                rollTo(2);
+            }else{
+                rollTo(1);
+            }
+        }
+        function rollTo(res){
+            $('#sbtn').hide();
+            $('#board').addClass('rolling-start')
+            setTimeout("$('#board').removeClass('rolling-start');$('#board').addClass('rolling-fast')",500);
+            setTimeout("$('#board').removeClass('rolling-fast');$('#board').addClass('rolling-end-"+res.toString()+"')",3000);
+        }
+    </script>
+</body>
+</html>
