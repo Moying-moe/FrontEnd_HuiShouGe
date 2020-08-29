@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正在加载...</title>
+    <link href="./lib/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet">
+    <script src="./lib/jquery-3.4.1/jquery.min.js"></script>
+    <link href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="./style/item.css" rel="stylesheet">
+    <link href="./style/general.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container main-container">
+        <div>
+            <div class="img-box" id="raw-img-div">
+                <img id="img" />
+                <div class="zoom-overlay" id="overlay" style="top: -416px; display: none;"></div>
+            </div>
+            <div class="zoom-box" style="display: none;">
+                <img id="zoom-img" />
+            </div>
+        </div>
+        <div class="item-info">
+            <div class="item-name" id="name">防滑隔热垫</div>
+            <div class="item-point">
+                <div>兑换所需3R积分</div>
+                <div id="point">100</div>
+            </div>
+            <div class="item-price">
+                <div>市场售价</div>
+                <div>￥<span id="price">10.00</span></div>
+            </div>
+            <div class="item-intro" id="desc">
+                硅胶防滑隔热垫，安全无毒，遇热不分解。
+                <br>过热时不会产生有毒物质，废弃可自然降解，安全环保。
+            </div>
+            <div class="item-count">
+                <div class="tip">数量</div>
+                <div class="count-selector">
+                    <input type="text" class="count-box" id="count" value="1" />
+                    <div class="count-btn-box">
+                        <div id="incre" onclick="incre()"><div class="fa fa-fw fa-sort-up"></div></div>
+                        <div id="decre" disabled onclick="decre()"><div class="fa fa-fw fa-sort-down"></div></div>
+                    </div>
+                </div>
+                <div class="count-left">
+                    库存<span id="count-left">5</span>件
+                </div>
+            </div>
+            <div class="btn-box">
+                <button class="btn btn-warning btn-lg">兑换</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>const tab=0;$.get({url:'./general/header.html',success: (e)=>{$('#header').html(e);tab?$('#header-tab-'+tab.toString()).addClass('actived'):0;}});$.get({url:'./general/footer.html',success: (e)=>{$('#footer').html(e);}});</script>
+    <script src="./script/item.js"></script>
+</body>
+</html>

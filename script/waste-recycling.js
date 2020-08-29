@@ -231,16 +231,16 @@ const smallCategory = {
 };
 
 var pointMall = [
-    { price: 10.0, name: '防滑隔热垫', point: 100, src: 'images/waste-recycling/wr3_1.jpg' },
-    { price: 25.0, name: '城市果园盆栽', point: 250, src: 'images/waste-recycling/wr3_2.jpg' },
-    { price: 25.0, name: '康乐欧式纸巾盒', point: 100, src: 'images/waste-recycling/wr3_3.jpg' },
-    { price: 30.0, name: '迷你风扇', point: 350, src: 'images/waste-recycling/wr3_4.jpg' },
-    { price: 40.0, name: '咪咪熊煮蛋器', point: 400, src: 'images/waste-recycling/wr3_5.jpg' },
-    { price: 60.0, name: '花篮加湿器', point: 600, src: 'images/waste-recycling/wr3_6.jpg' },
-    { price: 70.0, name: '盆栽太阳能灯', point: 700, src: 'images/waste-recycling/wr3_7.jpg' },
-    { price: 149.0, name: '金刚音响', point: 1490, src: 'images/waste-recycling/wr3_8.jpg' },
-    { price: 149.0, name: '多功能电蒸锅', point: 1490, src: 'images/waste-recycling/wr3_9.jpg' },
-    { price: 169.0, name: '零碳台灯', point: 1690, src: 'images/waste-recycling/wr3_10.jpg' },
+    { index: 0, price: 10.0, name: '防滑隔热垫', point: 100, src: 'images/waste-recycling/wr3_1.jpg' },
+    { index: 1, price: 25.0, name: '城市果园盆栽', point: 250, src: 'images/waste-recycling/wr3_2.jpg' },
+    { index: 2, price: 25.0, name: '康乐欧式纸巾盒', point: 100, src: 'images/waste-recycling/wr3_3.jpg' },
+    { index: 3, price: 30.0, name: '迷你风扇', point: 350, src: 'images/waste-recycling/wr3_4.jpg' },
+    { index: 4, price: 40.0, name: '咪咪熊煮蛋器', point: 400, src: 'images/waste-recycling/wr3_5.jpg' },
+    { index: 5, price: 60.0, name: '花篮加湿器', point: 600, src: 'images/waste-recycling/wr3_6.jpg' },
+    { index: 6, price: 70.0, name: '盆栽太阳能灯', point: 700, src: 'images/waste-recycling/wr3_7.jpg' },
+    { index: 7, price: 149.0, name: '金刚音响', point: 1490, src: 'images/waste-recycling/wr3_8.jpg' },
+    { index: 8, price: 149.0, name: '多功能电蒸锅', point: 1490, src: 'images/waste-recycling/wr3_9.jpg' },
+    { index: 9, price: 169.0, name: '零碳台灯', point: 1690, src: 'images/waste-recycling/wr3_10.jpg' },
 ];
 
 function shuffle(a) {
@@ -307,6 +307,11 @@ function init() {
     for (var e of pointMall) {
         var fbox = $('<div>');
         fbox.addClass('point-goods-item');
+        fbox.attr('gid', e.index);
+        fbox.click((e) => {
+            var t = $(e.currentTarget);
+            window.open('/item.html?gid=' + t.attr('gid'));
+        });
 
         var ubox = $('<div>');
         ubox.appendTo(fbox);
