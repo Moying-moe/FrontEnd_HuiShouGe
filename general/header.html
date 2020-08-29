@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <link href="./style/general.css" rel="stylesheet">
     <div role="header">
         <div class="header-navbar">
             <div class="container">
@@ -49,7 +48,7 @@
                     </div>
                     <div class="nav-cart">
                         <img src="./images/general/top_4.png" />
-                        <a href="#" class="a-black-red">废品筐（0）</a>
+                        <a href="/waste-baskets.html" class="a-black-red">废品筐（0）</a>
                     </div>
                 </div>
             </div>
@@ -71,9 +70,9 @@
     </div>
     <script>
         var user = $.cookie('user');
-        if(user){
+        if (user) {
             $('#login').hide();
-            $('#username').text('欢迎你 '+user);
+            $('#username').text('欢迎你 ' + user);
             $('#welcome').show();
         }
         function logout() {

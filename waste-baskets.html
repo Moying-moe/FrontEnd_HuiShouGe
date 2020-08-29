@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>回收框</title>
+    <link href="./lib/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet">
+    <!--bootstrap_css-->
+    <script src="./lib/jquery-3.4.1/jquery.min.js"></script>
+    <!--jquery-->
+    <link rel="stylesheet" type="text/css" href="./style/waste-baskets.css" />
+    <link href="./style/general.css" rel="stylesheet">
+</head>
+
+<body onload="loadProv()">
+    <div id="header"></div>
+
+    <div class="middle">
+        <div class="container">
+            <div class="parent-form" action="#" method="post">
+                <div class="form-one">
+                    <span>
+                        <label for="trading address">　交易地址：</label>
+                        <select id="prov" onchange="loadCity()">
+                            <option value=""></option>
+                        </select>
+                        <label>(省)</label>
+
+                        <select id="city" onchange="loadCounty()">
+                            <option value=""></option>
+                        </select>
+                        <label>(市 )</label>
+
+                        <select id="county" onchange="saveAddr()">
+                            <option value=""></option>
+                        </select>
+                        <label>(区)</label>
+
+                        <input type="text" id="detailed-address" />
+
+                        <span class="pointer select-address">
+                            <label class="pointer">选择常用地址</label>
+                            <img src="images/waste-baskets/ia_100000015.jpg" align="middle">
+                        </span>
+                        <div id="usual-address">
+                            <p>使用过的地址都会自动保存在这里哦</p>
+                            <ul>
+                                <li>江苏省 南京市 浦口区 盘城街道XXX</li>
+                                <li>浙江省 杭州市 上城区 XXX</li>
+                                <li>福建省 厦门市 思明区 XXX</li>
+                            </ul>
+                        </div>
+
+                    </span>
+                    <span>
+                        <label>联系人姓名：</label>
+                        <input type="text" name="contact name" />
+
+                        <label>联系电话：</label>
+                        <input type="text" name="contact number" />
+                    </span>
+                    <span>
+                        <label>　预约日期：</label>
+                        <input type="text" name="appointment date" />
+
+                        <label>预约时间：</label>
+                        <input type="text" name="appointment time" />
+                    </span>
+                </div>
+                <div class="form-two">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>商品名</td>
+                            <td>价格</td>
+                            <td>数量</td>
+                            <td>金额</td>
+                            <td>碳积分</td>
+                            <td>碳减排</td>
+                            <td>操作</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="goods-content">
+                                    <input type="checkbox" class="goods-selected" />
+                                    <img src="images/waste-baskets/ia_100000005.jpg">
+                                    <div>
+                                        <span>格力</span>
+                                        <span>壁挂式</span>
+                                        <span>KFR-35GW/(35596)FNAa-A3</span>
+                                        <span>压缩机缺失</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="goods-price">
+                                    450
+                                </div>
+                            </td>
+                            <td>
+                                <div class="goods-quantity">
+                                    <input type="button" class="reduce" value="-" disabled="true" />
+                                    <input type="text" class="num" value="1" readonly="true" />
+                                    <input type="button" class="add" value="+" />
+                                    <label>有货</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="goods-amount">
+                                    ￥450
+                                </div>
+                            </td>
+                            <td>
+                                <div class="carbon-credits">
+                                    4500分
+                                </div>
+                            </td>
+                            <td>
+                                <div class="carbon-reduction">
+                                    150千克
+                                </div>
+                            </td>
+                            <td>
+                                <div class="goods-option">
+                                    <div class="delete-item pointer">
+                                        删除
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="goods-content">
+                                    <input type="checkbox" class="goods-selected" />
+                                    <img src="images/waste-baskets/ia_100000005.jpg">
+                                    <div>
+                                        <span>格力</span>
+                                        <span>壁挂式</span>
+                                        <span>KFR-35GW/(35596)FNAa-A3</span>
+                                        <span>压缩机缺失</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="goods-price">
+                                    450
+                                </div>
+                            </td>
+                            <td>
+                                <div class="goods-quantity">
+                                    <input type="button" class="reduce" value="-" disabled="true" />
+                                    <input type="text" class="num" value="1" readonly="true" />
+                                    <input type="button" class="add" value="+" />
+                                    <label>有货</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="goods-amount">
+                                    ￥450
+                                </div>
+                            </td>
+                            <td>
+                                <div class="carbon-credits">
+                                    4500分
+                                </div>
+                            </td>
+                            <td>
+                                <div class="carbon-reduction">
+                                    150千克
+                                </div>
+                            </td>
+                            <td>
+                                <div class="goods-option">
+                                    <div class="delete-item pointer">
+                                        删除
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="baskets-is-empty">
+                            <td colspan="7">
+                                <div>
+                                    <img src="images/waste-baskets/shopping.svg">
+                                    <br />
+                                    您的废品框空空如也
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-three">
+                    <span>
+                        <input type="checkbox" id="all-selected" />
+                        <label>全选</label>
+                        <span id="delete-selected" class="pointer">删除选择</span>
+                        <span id="delete-all" class="pointer">清空废品框</span>
+                        <span id="total">
+                            <span>合计:</span>
+                            <span id="total-amount">￥0</span>
+                        </span>
+                    </span>
+                    <span id="total-carbon-credit">碳积分：9000分</span>
+                    <span id="total-carbon-reduction">碳减排：300千克</span>
+
+                    <div>
+                        <input type="submit" onclick="submit()" value="提交订单" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>$.get({url:'./general/header_order.html',success: (e)=>{$('#header').html(e);}});$.get({url:'./general/footer.html',success: (e)=>{$('#footer').html(e);}});</script>
+
+    <script src="./script/city.js"></script>
+    <script src="./script/addr-index.js"></script>
+    <script src="./script/calc.js"></script>
+    <!-- <script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script> -->
+
+</body>
+
+</html>
