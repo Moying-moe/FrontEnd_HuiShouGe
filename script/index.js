@@ -1,8 +1,13 @@
 var globalIndex = 1;
 var autoPlaying = true;
 
-function activateItem(index) {
+function mouseActive(index) {
     autoPlaying = false;
+    activateItem(index);
+}
+
+function activateItem(index) {
+    // autoPlaying = false;
     globalIndex = index;
     $('dot.actived').removeClass('actived');
     $('#dot'+index.toString()).addClass('actived');
