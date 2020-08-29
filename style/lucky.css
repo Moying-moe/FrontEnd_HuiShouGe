@@ -5,6 +5,7 @@ body {
 .container {
     text-align: center;
     font-size: 0;
+    margin-top: 30px;
 }
 
 .board-box {
@@ -78,7 +79,7 @@ body {
 .start-btn {
     position: absolute;
     left: calc(50% - 75px - 30px);
-    top: calc(300px - 75px);
+    top: calc(300px - 75px + 30px);
     height: 150px;
     width: 150px;
     border: 3px solid rgba(0,0,0,0.7);
@@ -91,10 +92,11 @@ body {
     line-height: 1;
     transition: all 0.25s ease;
     box-shadow: 0 0 5px #000;
+    animation: flash 0.5s linear infinite;
 }
 
 .start-btn:hover {
-    background-color: rgb(251,100,146);
+    background-color: rgb(251,100,146) !important;
     border: 3px solid #000;
 }
 
@@ -104,4 +106,19 @@ body {
     position: relative;
     left: -40px;
     z-index: 512;
+}
+
+@keyframes flash{
+    0%{
+        background-color: #fc5185;
+    }
+    49%{
+        background-color: #fc5185;
+    }
+    50%{
+        background-color: rgb(251,100,146);
+    }
+    100%{
+        background-color: rgb(251,100,146);
+    }
 }

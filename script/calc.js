@@ -148,5 +148,5 @@ $("#delete-all").click(function(){
 
 function submit() {
 	alert('提交成功');
-	location.href="/index.html"
+	location.href="/lucky.html"
 }
