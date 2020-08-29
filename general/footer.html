@@ -7,12 +7,17 @@
 
     <link href="./lib/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet">
     <link href="./lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./lib/iconfont/iconfont.css" rel="stylesheet">
     <!-- <script src="./lib/jquery-3.4.1/jquery.min.js"></script> -->
     <!-- <link href="./style/general.css" rel="stylesheet"> -->
 </head>
 
 <body>
     <div role="footer">
+        <div class="to-top-box" style="display: none;" id="to-top" onclick="toTop()">
+            <span class="iconfont icon-top"></span>
+            <!-- 回到顶部 -->
+        </div>
         <div class="overlay" id="overlay" style="display: none;">
             <div class="overlay-box">
                 <div class="overlay-close" onclick="closeOverlay()">
@@ -76,6 +81,24 @@
                 $('#overlay').hide();
                 $('#wechat-box').hide();
                 $('#download-box').hide();
+            }
+            var shown = false;
+            function onScrollDetect(e) {
+                var srTop = $(window).scrollTop();
+                if(srTop >= 730 && !shown){
+                    $('#to-top').show(500);
+                    shown = true;
+                }else if(srTop < 730 && shown){
+                    $('#to-top').hide(500);
+                    shown = false;
+                }
+            }
+            $(window).scroll(onScrollDetect);
+            function toTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
             }
         </script>
     </div>

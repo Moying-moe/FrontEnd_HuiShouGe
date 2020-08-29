@@ -304,3 +304,30 @@ a, a:visited, a:hover, a:active {
 }
 
 /* overlay END */
+
+/* to top START */
+
+.to-top-box {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: calc(50% + 585px + 20px);
+    top: 70%;
+    transform: translate(0,-50%);
+    cursor: pointer;
+    color: gray;
+    text-align: center;
+    border-radius: 5px;
+}
+.to-top-box > span {
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.to-top-box:hover {
+    background-color: #eee;
+}
+
+/* to top END */
