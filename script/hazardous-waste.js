@@ -9,9 +9,25 @@ const titleData = {
     }
 }
 
+function articleRandomize() {
+    var parent = $('.en-value-right-2').children('ul');
+    var tmp = new Array();
+    for(var e of parent.children('li')){
+        tmp.push(e);
+    }
+    tmp = tmp.sort(function(){return Math.random()-0.5;});
+    parent.children('li').remove();
+    console.log(tmp);
+    
+    for(var e of tmp){
+        parent.append(e);
+    }
+}
+
 function tabSwitch(ind) {
     $('li[role="tab-switcher"]').removeClass('actived');
     $('li#tab-btn-'+ind.toString()).addClass('actived');
     $('#title-cate').text(titleData[ind].titleCate);
     $('#title').text(titleData[ind].title);
+    articleRandomize();
 }

@@ -297,7 +297,7 @@ if ('onhashchange' in window && (typeof document.documentMode === 'undefined' ||
 } else {
     // 不支持
     setInterval(function () {
-        var ischanged = (oldHash != window.location.hash);
+        var ischanged = oldHash != window.location.hash;
         if (ischanged) {
             oldHash = window.location.hash;
             hashChangeTrigger();
@@ -316,3 +316,23 @@ function hashChangeTrigger() {
 }
 
 hashChangeTrigger();
+
+function tomap(ind) {
+    if (ind == 1) {
+        window.open(
+            'https://www.amap.com/search?query=%E6%AD%A6%E6%B1%89%E5%B8%82%E4%B8%9C%E6%B9%96%E6%96%B0%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E5%8C%BA%E5%85%89%E8%B0%B7%E5%A4%A7%E9%81%9377%E5%8F%B7%E5%85%89%E8%B0%B7%E9%87%91%E8%9E%8D%E6%B8%AFA3%E6%A0%8B15%E6%A5%BC&city=320000&geoobj=116.536479%7C30.612336%7C123.972925%7C33.681151&zoom=7.24'
+        );
+    } else if (ind == 2) {
+        window.open(
+            'https://www.amap.com/search?query=%E5%A4%A9%E6%B4%A5%E5%B8%82%E5%8D%97%E5%BC%80%E5%8C%BA%E6%A6%95%E8%8B%91%E8%B7%AF%E9%91%AB%E8%8C%82%E7%A7%91%E6%8A%80%E5%9B%AD%E5%86%9B%E6%B0%91%E5%9B%ADB%E5%BA%A71%E5%8F%B7%E6%A5%BC1705%E5%AE%A4&city=120000&geoobj=116.73109%7C38.836602%7C117.424283%7C39.099343&zoom=10.66'
+        );
+    } else if (ind == 3) {
+        window.open(
+            'https://www.amap.com/search?query=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%AE%9D%E5%AE%89%E6%96%B0%E4%B8%AD%E5%BF%83%E5%8C%BA%E8%B7%AF%E5%8D%97%E4%BE%A7%E8%8D%A3%E8%B6%85%E6%BB%A8%E6%B5%B7%E5%A4%A7%E5%8E%A6A%E6%A0%8B20%E5%B1%82&city=120000&geoobj=117.09124%7C39.075072%7C117.186287%7C39.111033&zoom=13.53'
+        );
+    } else if (ind == 4) {
+        window.open(
+            'https://www.amap.com/search?query=%E6%B9%96%E5%8C%97%E7%9C%81%E8%8D%86%E9%97%A8%E5%B8%82%E4%B8%9C%E5%AE%9D%E5%8C%BA%E7%89%8C%E6%A5%BC%E9%95%87%E5%B7%A5%E4%B8%9A%E5%9B%AD%E6%B9%96%E5%8C%97%E9%84%82%E4%B8%AD%E5%86%8D%E7%94%9F%E5%A4%A7%E5%B8%82%E5%9C%BA%E8%8D%86%E9%97%A8%E5%9B%BD%E9%99%85%E5%88%9B%E5%AE%A2%E4%B8%AD%E5%BF%83%E4%BA%8C%E6%A5%BC&city=420800&geoobj=112.285355%7C31.044299%7C112.291424%7C31.047052&zoom=17.5'
+        );
+    }
+}

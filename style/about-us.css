@@ -212,3 +212,8 @@
 #select3 {
     display: none;
 }
+
+
+.cursor {
+    cursor: pointer;
+}
