@@ -1,0 +1,1 @@
+$($('.scroll-item')[parseInt(Math.random()*3)]).addClass('actived');

@@ -129,13 +129,15 @@ function signup() {
     setTimeout("location.href='/index.html'", Math.random()*1000+3000);
 }
 
-function toSignup() {
-    $('.login-box').addClass('fade-to-signup');
-    $('.main-container').addClass('fade-to-signup');
-    $('.login-box').children().hide(500);
-    setTimeout(windowSwitch,1000);
-    // addLoadingMark('#loading-effect');
-    // $('.login-box').children().fadeOut(1000);
+function toSignup(method) {
+    if(method == 'quick'){
+        windowSwitch();
+    }else{
+        $('.login-box').addClass('fade-to-signup');
+        $('.main-container').addClass('fade-to-signup');
+        $('.login-box').children().hide(500);
+        setTimeout(windowSwitch,1000);
+    }
 }
 
 function windowSwitch() {
@@ -144,3 +146,28 @@ function windowSwitch() {
     $('.signup-box').show();
     $('.signup-box').children().fadeIn(500);
 }
+
+
+var oldHash = window.location.hash;
+
+if ('onhashchange' in window && (typeof document.documentMode === 'undefined' || document.documentMode == 8)) {
+    // 浏览器支持onhashchange事件
+    window.onhashchange = hashChangeTrigger;
+} else {
+    // 不支持
+    setInterval(function () {
+        var ischanged = (oldHash != window.location.hash);
+        if (ischanged) {
+            oldHash = window.location.hash;
+            hashChangeTrigger();
+        }
+    }, 150);
+}
+function hashChangeTrigger() {
+    var enterTab = window.location.hash;
+    if(enterTab == '#signup') {
+        toSignup('quick');
+    }
+}
+
+hashChangeTrigger();

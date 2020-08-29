@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>回收哥加盟</title>
+    <link href="./lib/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet">
+    <script src="./lib/jquery-3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style/env_main.css">
+    <link href="./style/recycling-brother.css" rel="stylesheet">
+    <link href="./style/general.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="scroll-banner">
+        <div class="scroll-item" id="banner1"></div>
+        <div class="scroll-item" id="banner2"></div>
+        <div class="scroll-item" id="banner3"></div>
+        <div class="scroll-content">
+            <div class="scroll-right-box">
+                <div class="phone">
+                    <div>
+                        <img src="images/index/I1_phone.png" />
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <div>客服热线:</div>
+                        <div>400-866-6688</div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="entry-btn" onclick="location.href='/waste-recycling.html'">
+                        <img src="images/index/I1_ico1.png" /> 废品回收入口
+                    </div>
+                    <div><img src="images/index/I1_ico3.png" /></div>
+                    <div class="entry-btn" onclick="location.href='/recycling-brother.html'">
+                        <img src="images/index/I1_ico2.png" /> 我要做回收哥
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foot-left">
+            <div class="download-title">回收哥专用下载</div>
+            <div>
+                <div class="download-d2">
+                    <div>
+                        <img src="./images/recycling-brother/code-ios1.png">
+                    </div>
+                    <div>
+                        <img src="./images/recycling-brother/ia_1700000009.png">
+                        <div>iOS下载</div>
+                    </div>
+                </div>
+                <div class="download-d2">
+                    <div>
+                        <img src="./images/recycling-brother/code-ios2.png">
+                    </div>
+                    <div>
+                        <img src="./images/recycling-brother/ia_1700000011.png">
+                        <div>安卓下载</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-right">
+            <div class="foot-title">关于回收哥介绍</div>
+            <div>
+                <img src="./images/recycling-brother/ia_1700000012.jpg">
+                <img src="./images/recycling-brother/ia_1700000013.jpg">
+            </div>
+            
+            <p>2014年6月7日下午，全国政协主席俞正声走进格林美电子废弃物绿色处理车间，检阅电子废弃物绿色拆解过程，走近电视机拆解岗位，和一线员工亲切交谈，关切关怀格林美员工的生活与工作情况，令全体员工倍受鼓舞。俞主席赞叹：“没有想到短短八年，格林美发展得这么好！没有想到格林美废物处理的物理技术如此先进！”
+            </p>
+            <div>
+                <img src="./images/recycling-brother/ia_1700000014.jpg">
+            </div>
+
+            <div class="foot-title" style="text-indent: 2em; margin: 15px 0 10px;">成为回收哥，赚钱更容易</div>
+            <p>
+                1.外出回收不用撒网捞鱼，可以利用格林美APP推送的老百姓回收信息，实现点对点回收，提高效率，提高当日生意量；
+            </p>
+            <p>
+                2.减少中间二道贩子，实现回收哥将废品直接到格林美，将原本二道贩子的价差增加部分到个体户，让回收哥赚更多的钱。
+            </p>
+            <p>
+                3.由格林美垫付废品费用给老百姓，回收哥赚取佣金；抢单模式鼓励勤奋的、服务好的回收哥做大做强，造就回收哥的幸福生活，吸引更多的人加入创业就业。
+            </p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>const tab = 3; $.get({ url: './general/header.html', success: (e) => { $('#header').html(e); tab ? $('#header-tab-' + tab.toString()).addClass('actived') : 0; } }); $.get({ url: './general/footer.html', success: (e) => { $('#footer').html(e); } });</script>
+    <script src="script/recycling-brother.js"></script>
+</body>
+
+</html>
